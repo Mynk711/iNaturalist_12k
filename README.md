@@ -16,16 +16,41 @@ Training the model includes the following: <br /> <br />
 ## **Task-2** <br />
 After building the initial model, we need to identify the hyperparameters that needs tuning and find the best combination for improved efficiency and performance.<br />
 In order to evaluate the impact of hyperparameters on the model's accuracy, we need to log them. <br /><br />
-**Logging the hyperparameters-** We can either use custom logging where the data is saved in a json or a text file and can be used in later iterations of the model.
+### **Logging the hyperparameters** 
+We can either use custom logging where the data is saved in a json or a text file and can be used in later iterations of the model.
 TenserBoard could also be used with Keras for logging these hyperparameters. <br /><br />
-**Evaluation of Hyperparameters :** Consider different values and combinations of hyperparameters (learning rate, number of epochs, batch sizes, etc.) that needs evaluation. <br />
+### **Evaluation of Hyperparameters** 
+Consider different values and combinations of hyperparameters (learning rate, number of epochs, batch sizes, etc.) that needs evaluation. <br />
 We train and evaluate the model with different hyperparameter combinations on the validation set. <br />
 We select an evaluation metric which aligns with the problem statement. It could be accuracy, recall, AUC value, etc. In this scenario, the prime objective is to identify the class of the image given as input, so we will focus on the accuracy of the model. <br />
 We'll keep track of the evaluation metric values for each hyperparameter combination and record model's accuracy on the validation dataset for all experiments.<br />
 The hyperparameter combination that leads to the best performance on the validation set will be used for the final model.<br />
-The model is trained using the hyperparameters established previously on the combined traing and validation sets.<br />
+The model is trained using the hyperparameters established previously on the combined training and validation sets.<br />
 Finally, the performance of the model is judged on the basis of its result on the test dataset, which gives an unbiased estimate of how well the model can generalize to unseen, new data.<br />
 We need to iterate the hyperparameter tuning process and fine tune it to achieve more accuracy and efficiency.<br />
+
+## **Task-3** <br />
+#### In the case of the model not performing to the expected efficiency, a detailed analysis is required to capture the reasoning behind the failure of the model. I would focus on the following:<br />
+Inconsistent labeling<br />
+Overfitting<br />
+Underfitting<br />
+Class imbalance<br />
+Incorrect hyperparameter tuning<br />
+Ambiguous classes<br />
+Model complexity<br />
+Data preprocessing<br />
+#### Debugging the neural network to discover potential shortcomings could be done using the following methods: <br />
+##### Data Analysis and Visualization
+I would visualize the data and model predictions to gain insights into the behaviour of the model. This helps in separating the cases where the model is performing well from the cases where it is failing to give the desired class output. <br />
+##### Learning Rate and Loss Curves
+Checking the loss curves during training. The learning rate might be too high if the loss curves are not decreasing. The model's architecture would require adjustment in such a scenario. <br />
+##### Hyperparameter Tuning<br />
+##### Confusion Matrix <br />
+##### Error Analysis and False positives <br />
+
+
+
+
 
 
 
